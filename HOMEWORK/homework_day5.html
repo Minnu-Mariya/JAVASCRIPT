@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Access()">click me</button>
+    <script>
+        let user = {
+            Name: "Minnu",
+            age: 23,
+            admin: true   
+        };
+        var exists = "age" in user;
+        console.log(exists);   
+        function Access() {
+            var Accessed = (user.age >= 18 && user.admin === true)? "Access granted": "Access denied";
+
+            console.log(Accessed);
+
+            delete user.age;   
+        }
+    </script>
+
+</body>
+</html>

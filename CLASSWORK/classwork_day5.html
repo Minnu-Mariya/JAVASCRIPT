@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="delivered()">click me</button>
+    <script>
+        let order={
+            itemName:"Laptop",
+            isDelivered:"true",
+            daysSinceDelivery:4
+        };
+        function delivered(){
+           var delivery=(order.daysSinceDelivery<7) || (order.isDelivered==true) ? "eligible for return":"return period expired";
+            console.log(delivery)
+
+        }
+        var exists="itemName" in order;
+        console.log(exists);
+        delete order.daysSinceDelivery;
+        console.log(order);
+    </script>
+</body>
+</html>
