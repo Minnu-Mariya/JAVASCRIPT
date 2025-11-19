@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>"Student Result Dashboard"</h4>
+    <script>
+        var students=[
+            {name: "Minnu",score:80},
+            {name: "Manuvell",score:60},
+            {name:"preshith",score:76},
+            {name:"albin",score:68}
+        ];
+        students.forEach(function(student){
+            console.log(student.name);
+        });
+        var pass=students.filter(function(item){
+            return item.score>60;
+        });
+        
+    </script>
+</body>
+</html>

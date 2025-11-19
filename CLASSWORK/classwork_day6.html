@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Online Grocery</h2>
+<p id="demo"></p>
+<script>
+var product = ["mango","apple","papaya"];
+var price = [20,30,40];
+product.push("Watermelon");
+price.push(80);
+var merged = product.map(function(value, index) {
+    return { product: value, price: price[index] };
+});
+var filtered = merged.filter(function(item) {
+    return item.price > 20;
+});
+var text = "<ul>";
+for (i = 0; i < filtered.length; i++) {
+  text += "<li>" + filtered[i].product + " - " + filtered[i].price + "</li>";
+}
+text += "</ul>";
+document.getElementById("demo").innerHTML = text;
+</script>
+</body>
+</html>

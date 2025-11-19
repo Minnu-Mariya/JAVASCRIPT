@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let pastDate= {
+            dateOfLastBirthday: "29-08-2002"
+        };
+        function getPastDetails() {
+            let Bdate=new Date(pastDate.dateOfLastBirthday);
+            let year=Bdate.getFullYear();
+            let month=Bdate.getMonth();
+            let date=Bdate.getDate();
+            let today = new Date();
+            let yearsPassed = today.getFullYear() - year;
+        }
+    </script>
+</body>
+</html>
