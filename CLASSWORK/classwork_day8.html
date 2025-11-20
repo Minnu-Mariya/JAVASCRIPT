@@ -8,7 +8,8 @@
 <body>
     <p>Grocery Calculating Calculator</p>
 <script>
-    for(let i=1;i<=5;i++){
+    let purchase=0;
+    while(purchase<5){
         
         let code = parseInt(prompt("enter the code: "));
         let quantity = parseInt(prompt("enter the quantity: "));
@@ -35,16 +36,15 @@
         }
 
         let total = price * quantity;
-
-        document.write("<br>Item: " + itemName);
-        document.write("<br>Quantity: " + quantity);
-        document.write("<br>Total Price: ₹" + total);
+        alert(`itemName${itemName} quantity:${quantity} total"${total}`);
+       
 
         if(total > 100){
-            document.write("<br>High Purchase<br><br>");
+            alert("<br>High Purchase<br><br>");
         } else {
-            document.write("<br>Normal Purchase<br><br>");
+            alert("<br>Normal Purchase<br><br>");
         }
+        purchase++;
     }
 </script>
 </body>

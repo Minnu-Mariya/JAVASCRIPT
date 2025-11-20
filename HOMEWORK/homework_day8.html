@@ -9,9 +9,10 @@
     <h4>GAME</h4>
     <script>
         let Attempts = 0;
+        let num = parseInt(prompt("Enter a number between 1 and 5:"));
         for (let i = 1; i <= 5; i++) {
 
-        let num = parseInt(prompt("Enter a number between 1 and 5:"));
+        
 
     
         if (num < 1 || num > 5 || isNaN(num)) {
@@ -37,15 +38,18 @@
         if (num === 3) {
         document.write("You guessed it right!<br>");
         break;  
-        } else {
-        document.write("Wrong guess. Try again.<br>");
+        } else if(num!=3){
+            document.write("Wrong guess. Try again.<br>")
         }
+        
+        else {
+        document.write("invalid");
+        }
+         
 }
+document.write("<br><b>Game over</b>");
 
-
-    if (Attempts === 5) {
-    document.write("<br><b>Game over</b>");
-    }
+    
     </script>
 </body>
 </html>

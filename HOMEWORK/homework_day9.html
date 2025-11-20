@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function myComment(comment){
+            let updatedComment=comment.replace(/\b(bad|ugly|stupid)\b/ig,"***");
+            let numberMatches = comment.match(/\d+/g);
+            let numberCount = numberMatches ? numberMatches.length : 0;
+            let words = comment.split(/\s+/);
+            let capitalCount = words.filter(word =>/^[A-Z]/.test(words)).length;
+            return{
+               cleanedComment: updatedComment,
+               NumberCount: numberCount,
+               capital: capitalCount
+            }
+        }
+        let userComment="I think this movie was BAD and 100% Stupid! But the Acting was Amazing and 3 actors were great."
+        let result=myComment(userComment);
+        console.log("cleanedcommet : ",result.cleanedComment);
+        console.log("numbercount : ",result.NumberCount);   
+        console.log("capitalcount : ",result.capital);
+    </script>
+</body>
+</html>
