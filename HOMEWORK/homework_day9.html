@@ -7,12 +7,13 @@
 </head>
 <body>
     <script>
+    console.log(a+b);
         function myComment(comment){
             let updatedComment=comment.replace(/\b(bad|ugly|stupid)\b/ig,"***");
             let numberMatches = comment.match(/\d+/g);
             let numberCount = numberMatches ? numberMatches.length : 0;
             let words = comment.split(/\s+/);
-            let capitalCount = words.filter(word =>/^[A-Z]/.test(words)).length;
+            let capitalCount = words.filter(/^[A-Z]/.test(words)).length;
             return{
                cleanedComment: updatedComment,
                NumberCount: numberCount,

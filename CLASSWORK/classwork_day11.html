@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class book {
+            constructor(title,author,price){
+                this.title = title;
+                this.author=author;
+                this.price = price;
+            }
+            getTitle() {
+                return this.title;
+            }
+            getAuthor() {
+                return this.author;
+            }
+            setPrice(newprice) {
+                if(typeof newprice==="number" && newprice>0){
+                    this.price=newprice;
+                    console.log("price updated successfully")
+                }else{
+                    console.log("invalid!")
+                }
+            }
+            printDetails() {
+            console.log(`Title: ${this.title}`);
+            console.log(`Author: ${this.author}`);
+            console.log(`Price: $${this.price}`);
+            }
+        }
+            let myBook = new book("The Alchemist", "Paulo Coelho", 12.99);
+            myBook.setPrice(-50);   
+            myBook.setPrice(15.50); 
+            myBook.printDetails();
+        
+    </script>
+    
+</body>
+</html>
