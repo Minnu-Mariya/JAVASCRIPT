@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Lottery Draw</title>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+    <div class="container mt-5">
+
+        <div class="card shadow-lg p-4 mx-auto text-center"
+             style="max-width: 400px; border-radius: 20px;">
+
+            <h2 class="mb-3 text-primary fw-bold">Lottery Draw</h2>
+
+            <h4 class="mb-4 text-danger" id="winner">Winner:</h4>
+    <h3>Lottery Draw</h3>
+
+    
+    <h2 id="winner" style="color:red;"></h2>
+
+    <button onclick="pickWinner()">Pick Winner</button>
+    <div class="modal fade" id="winModal"> 
+        <div class="modal-dialog"> 
+            <div class="modal-content p-3">
+                 <h3 id="modalWinner"></h3> 
+                </div>
+             </div> 
+            </div>
+   
+    
+
+    <script>
+        let tickets = [11, 22, 33, 44, 55];
+
+        function pickWinner() {
+            let winner = tickets[Math.floor(Math.random() * tickets.length)];
+
+            
+            console.log("Winner:", winner);
+
+            
+            document.getElementById("winner").innerText = "Winner: " + winner;
+
+            document.getElementById("modalWinner").innerText = "Winner: " + winner; 
+            new bootstrap.Modal(document.getElementById("winModal")).show();
+         }
+
+           
+        
+    </script>
+
+</body>
+</html>
